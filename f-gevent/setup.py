@@ -16,6 +16,6 @@ setup(
     install_requires = [
     "gevent==1.2.1"
     ],
-    packages    = find_packages('modules'),
-    package_dir = { '' : 'modules' },
+    packages    = find_packages('src'),
+    package_dir = { '' : 'src' },
 )
