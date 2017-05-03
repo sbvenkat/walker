@@ -57,7 +57,7 @@ develop-clean:
 	@rm -rf $(DEV_PATH);
 
 dist-clean:
-	@rm -rf dist;
+	@rm -rf dist src/*.egg-info;
 
 clean: develop-clean dist-clean
 	@echo "Project dev setup is clean";
