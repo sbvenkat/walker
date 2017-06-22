@@ -1,0 +1,10 @@
+Package: valsink.vs
+Version: APPVERSION
+Section: python
+Priority:
+Architecture: all
+Pre-Depends:
+Installed-Size:
+Maintainer: Sridhar BV <sridbv@gmail.com>
+Description: Valsink app for data collection
+

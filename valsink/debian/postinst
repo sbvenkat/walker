@@ -1,0 +1,3 @@
+echo "[START] Post install script start"
+
+echo "[END] Post install script end"
