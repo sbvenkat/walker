@@ -1,0 +1,8 @@
+version: '2'
+services:
+  valsink:
+    image: srbvsr/valsink
+    ports:
+      - "5000:5000"
+  redis:
+    image: redis:3.2.0

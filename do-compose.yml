@@ -1,12 +1,11 @@
-# Docker compose for development
+# Docker compose file for digital ocean
 version: '2'
 services:
   valsink:
     extends:
       file: com-compose.yml
       service: valsink
-    build: ./valsink/
- 
+  
   redis:
     extends:
       file: com-compose.yml
