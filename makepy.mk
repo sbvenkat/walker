@@ -81,9 +81,13 @@ deb-app-env:
 			exit 1; \
 		}; \
 	done;
+	@cp $(APP_PATH)/src/app/* $(APP_ENV)/bin/;
 	 
 deb-pkg: build deb-app-env
 	@echo "Create $(APP_NAME) debian package";
+	@mkdir -p $(APP_BUILD_PATH)/opt/$(APP_NAME)/cfg;
+	@mkdir -p $(APP_BUILD_PATH)/opt/$(APP_NAME)/log;
+	@cp $(APP_PATH)/config/* $(APP_BUILD_PATH)/opt/$(APP_NAME)/cfg/;
 	@cp -R $(APP_PATH)/debian $(APP_BUILD_PATH)/DEBIAN;
 	@sed -ie "s/APPVERSION/$(APP_PKG_VER)/g" $(APP_BUILD_PATH)/DEBIAN/control || { \
 		echo "Failed to rewrite DEBIAN control version"; \

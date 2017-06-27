@@ -3,7 +3,7 @@ Version: APPVERSION
 Section: python
 Priority:
 Architecture: all
-Pre-Depends:
+Pre-Depends: supervisor
 Installed-Size:
 Maintainer: Sridhar BV <sridbv@gmail.com>
 Description:

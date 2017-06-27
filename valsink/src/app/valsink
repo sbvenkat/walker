@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Supervisor startup script to invoke virtual env
+# and run valsink app
+
+PROG_NAME=valsink.py
+PROG_ENV=/opt/valsink/app-env/bin
+
+#Activate virtual env and run valsink program
+source ${PROG_ENV}/activate
+exec ${PROG_ENV}/${PROG_NAME} $@

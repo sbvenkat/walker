@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Supervisor startup script to invoke virtual env
+# and run app
+
+PROG_NAME={app_name}.py
+PROG_ENV=/opt/{app_name}/app-env/bin
+
+#Activate virtual env and run program
+source ${PROG_ENV}/activate
+exec ${PROG_ENV}/${PROG_NAME} $@
